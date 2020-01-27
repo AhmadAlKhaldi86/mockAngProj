@@ -1,0 +1,18 @@
+
+
+<p>Pick Your Genre</p>
+<select (change)="getSelectedGenre($event)">
+  <option *ngFor="let genre of getGenre" [value]="genre.name">{{genre.name}}</option>
+</select> 
+<br>
+
+<p>Pick Your Release Date</p>
+
+<div *ngFor="let movie of movieData">
+  <label>{{movie.title}}</label><br>
+  <img src="{{img_base_path}}{{movie.poster_path}}">
+</div>
+
+
+
+
